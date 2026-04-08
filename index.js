@@ -1,21 +1,21 @@
-//gallery project...
+//a test
 
-let username;
-username = window.prompt(`What's your username??`);
+let a = window.prompt(`what do you call a food with crust?`);
+a = String(a);
 
-document.getElementById(`myh1`).textContent = (`WELCOME, ${username}!`);
+let b = window.prompt(`How expensive is a mansion house?`);
+b = Number(b);
+b+=20000;
 
-let roblox1;
-roblox1 = window.prompt(`What's your age?`);
+let c = window.prompt(`Add your age to 15?`);
+c = Number(c);
+c+=15;
 
-document.getElementById(`description1`).textContent = (`Your age is ${roblox1}`);
+let d = window.prompt(`Is dog always dangerous than humane? (true or false)?`);
+d = Boolean(d);
 
-let roblox2;
-roblox2 = window.prompt(`What's your grade?`);
 
-document.getElementById(`description2`).textContent = (`Your grade is ${roblox2}`);
-
-let roblox3;
-roblox3 = window.prompt(`What's your height?`);
-
-document.getElementById(`description3`).textContent = (`Your height is ${roblox3}`);
+document.getElementById(`p1`).textContent = (`a ${a}`);
+document.getElementById(`p2`).textContent = (`more than ${b}`);
+document.getElementById(`p3`).textContent = (`${c}`);
+document.getElementById(`p4`).textContent = (`${d}`);
