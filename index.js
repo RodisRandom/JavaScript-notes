@@ -50,3 +50,8 @@ let j = "Correct Answer: LEAVES";
 j = String(j);
 
 document.getElementById(`p10`).textContent = (`${j}`);
+
+let k = "GENERAL SCIENCE CONTEXT";
+k = String(k);
+
+document.getElementById(`myh1`).textContent = (`${k}`);
