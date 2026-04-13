@@ -1,57 +1,33 @@
-//sadsadsada
+//testing for const
+
+console.log(`testing`);
+
+let a;
+a = "WELCOME TO THE";
+
+document.getElementById(`myh1`).textContent = (`${a} WEBSITE!!`);
+
+let b = window.prompt(`What is the average price for a pizza, in terms of inflation - itll add itself.`);
+b = Number(b);
+
+const c = 120;
+
+let f;
+f = b + c;
+f = Number(f);
 
 
-let a = window.prompt(`What do you call a geologic feature which causes mountain ranges?`);
-a = String(`1. ${a}`);     
 
-document.getElementById(`p1`).textContent = (`${a}`);
+let d = window.prompt(`What is the average price for a hotdog, in terms of deflaton, itll minus itself.?`);
+d = Number(d);
 
-let b = "Correct Answer: DIVERGENT BOUNDARY";
-b = String(b);
+const e = 20;
 
-document.getElementById(`p2`).textContent = (`${b}`);
+let l;
+l = d - e;
+l = Number(l);
 
-let c = window.prompt(`What do you call an organ system in which it secretes hormones?`);
-c = String(`2. ${c}`);
 
-document.getElementById(`p3`).textContent = (`${c}`);
+document.getElementById(`p1`).textContent = (`PRICE: ${f}`);
 
-let d = "Correct Answer: ENDOCRINE SYSTEM";
-d = String(d);
-
-document.getElementById(`p4`).textContent = (`${d}`);
-
-let e = window.prompt(`We all know there are many types of diversity, and which of those consist of falls in the environment?`);
-e = String(`3. ${e}`);
-
-document.getElementById(`p5`).textContent = (`${e}`);
-
-let f = "Correct Answer: BIODIVERSITY FALL";
-f = String(f);
-
-document.getElementById(`p6`).textContent = (`${f}`);
-
-let g = window.prompt(`Why food rotten, in what theory?`);
-g = String(`4. ${g}`);
-
-document.getElementById(`p7`).textContent = (`${g}`);
-
-let h = "Correct Answer: GERM THEORY";
-h = String(h);
-
-document.getElementById(`p8`).textContent = (`${h}`);
-
-let i = window.prompt(`What causes photosynthesis, in what parts of the botanist?`);
-i = String(`5. ${i}`);
-
-document.getElementById(`p9`).textContent = (`${i}`);
-
-let j = "Correct Answer: LEAVES";
-j = String(j);
-
-document.getElementById(`p10`).textContent = (`${j}`);
-
-let k = "GENERAL SCIENCE CONTEXT";
-k = String(k);
-
-document.getElementById(`myh1`).textContent = (`${k}`);
+document.getElementById(`p2`).textContent = (`PRICE: ${l}`);
