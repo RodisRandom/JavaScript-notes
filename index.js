@@ -1,33 +1,31 @@
-//testing for const
+//a new less
 
-console.log(`testing`);
+
+let username;
+
+
+document.getElementById(`mySubmit`).onclick = function(){
+    username = document.getElementById(`myText`).value;
+    document.getElementById(`myh1`).textContent = (`HELLO, ${username}`);
+}
 
 let a;
-a = "WELCOME TO THE";
 
-document.getElementById(`myh1`).textContent = (`${a} WEBSITE!!`);
+document.getElementById(`mySubmit2`).onclick = function(){
+    a = document.getElementById(`myText2`).value;
+    document.getElementById(`p1`).textContent = (`${a}`);
+}
 
-let b = window.prompt(`What is the average price for a pizza, in terms of inflation - itll add itself.`);
-b = Number(b);
+let b;
 
-const c = 120;
+document.getElementById(`mySubmit3`).onclick = function(){
+    b = document.getElementById(`myText3`).value;
+    document.getElementById(`p2`).textContent = (`${b}`);
+}
 
-let f;
-f = b + c;
-f = Number(f);
+let c;
 
-
-
-let d = window.prompt(`What is the average price for a hotdog, in terms of deflaton, itll minus itself.?`);
-d = Number(d);
-
-const e = 20;
-
-let l;
-l = d - e;
-l = Number(l);
-
-
-document.getElementById(`p1`).textContent = (`PRICE: ${f}`);
-
-document.getElementById(`p2`).textContent = (`PRICE: ${l}`);
+document.getElementById(`mySubmit4`).onclick = function(){
+    c = document.getElementById(`myText4`).value;
+    document.getElementById(`p3`).textContent = (`${c}`);
+}
