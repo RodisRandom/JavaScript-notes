@@ -1,31 +1,31 @@
-//a new less
+//counter program
 
 
 let username;
 
-
 document.getElementById(`mySubmit`).onclick = function(){
     username = document.getElementById(`myText`).value;
-    document.getElementById(`myh1`).textContent = (`HELLO, ${username}`);
+    document.getElementById(`myh1`).textContent = (`WELCOME, ${username}`);
 }
 
-let a;
 
-document.getElementById(`mySubmit2`).onclick = function(){
-    a = document.getElementById(`myText2`).value;
-    document.getElementById(`p1`).textContent = (`${a}`);
+const count = document.getElementById(`count`);
+const increase = document.getElementById(`increase`);
+const decrease = document.getElementById(`decrease`);
+const reset = document.getElementById(`reset`);
+let number = 0;
+
+increase.onclick = function(){
+    number++;
+    count.textContent = number;
 }
 
-let b;
-
-document.getElementById(`mySubmit3`).onclick = function(){
-    b = document.getElementById(`myText3`).value;
-    document.getElementById(`p2`).textContent = (`${b}`);
+decrease.onclick = function(){
+    number--;
+    count.textContent = number;
 }
 
-let c;
-
-document.getElementById(`mySubmit4`).onclick = function(){
-    c = document.getElementById(`myText4`).value;
-    document.getElementById(`p3`).textContent = (`${c}`);
+reset.onclick = function(){
+    number = 10;
+    count.textContent = number;
 }
