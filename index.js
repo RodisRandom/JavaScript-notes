@@ -1,62 +1,62 @@
-//rng
+//if statement
 
-const button1 = document.getElementById(`button1`);
-const myLabel = document.getElementById(`myLabel`);
-const min = 1;
-const max = 100;
-let randomNumber;
 
-button1.onclick = function(){
-    randomNumber = Math.floor(Math.random() * 100) + 1;
-    myLabel.textContent = randomNumber;
+
+const myText = document.getElementById(`myText`);
+const mySubmit = document.getElementById(`mySubmit`);
+const myh1 = document.getElementById(`myh1`);
+let age;
+
+mySubmit.onclick = function(){
+    age = myText.value;
+    age = Number(age);
+
+    if (age > 100){
+        myh1.textContent = (`youre too old`);
+    }
+
+    else if (age >=18){
+        myh1.textContent = (`you can enter this site`);
+    }
+
+    else if (age <0){
+        myh1.textContent = (`your age can't be below 0`);
+    }
+
+    else if (age == 0){
+        myh1.textContent = (`you just born`)
+    }
+
+    else{
+        myh1.textContent = (`you're too young to enter this site`);
+    }
 }
 
 
-const myLabel2 = document.getElementById(`myLabel2`);
-const button2 = document.getElementById(`button2`);
-const button3 = document.getElementById(`button3`);
-const button4 = document.getElementById(`button4`);
-const button5 = document.getElementById(`button5`);
-const button6 = document.getElementById(`button6`);
-const button7 = document.getElementById(`button7`);
-let number;
+const myText2 = document.getElementById(`myText2`);
+const mySubmit2 = document.getElementById(`mySubmit2`);
+const p1 = document.getElementById(`p1`);
+let instrument;
 
-button2.onclick = function(){
-    number = 0;
-    myLabel2.textContent = number;
-}
 
-button3.onclick = function(){
-    number = 20;
-    myLabel2.textContent = number;
-}
+mySubmit2.onclick = function(){
+    instrument = myText2.value;
+    instrument = String(instrument);
 
-button4.onclick = function(){
-    number = 40;
-    myLabel2.textContent = number;
-}
+    if (instrument == guitar){
+        p1.textContent = (`You rock with guitar1!`);
+    }
 
-button5.onclick = function(){
-    number = 60;
-    myLabel2.textContent = number;
-}
+    else if (instrument == violin){
+        p1.textContent = (`you're a bethooven!`);
+    }
 
-button6.onclick = function(){
-    number = 80;
-    myLabel2.textContent = number;
-}
+    else if (instrument == piano){
+        p1.textContent = (`classical music!`);
 
-button7.onclick = function(){
-    number = 100;
-    myLabel2.textContent = number;
-}
+    }
 
-button8.onclick = function(){
-    number--;
-    myLabel2.textContent = number;
-}
-
-button9.onclick = function(){
-    number++;
-    myLabel2.textContent = number;
+    else if (instrument == drum){
+        p1.textContent = (`you live in 1970s!`);
+    }
 }
