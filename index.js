@@ -1,33 +1,60 @@
-//checked property
+//switch
 
-
-const mySubscribe = document.getElementById(`mySubscribe`);
-const myGCash = document.getElementById(`myGCash`);
-const myCreditCard = document.getElementById(`myCreditCard`);
+const myInput = document.getElementById(`myInput`);
 const mySubmit = document.getElementById(`mySubmit`);
 const p1 = document.getElementById(`p1`);
-const p2 = document.getElementById(`p2`);
-
+let message;
 
 
 mySubmit.onclick = function(){
 
-    if(mySubscribe.checked){
-        p1.textContent = (`You are subscribed`)
+    message = myInput.value;
+
+    switch(true){
+
+        case message>=100:
+            p1.textContent = (`You're a strong, healthy person`)
+            break;
+
+        case message>=80:
+            p1.textContent = (`you lived more than an average person lived`)
+            break;
+            
+        case message>=60:
+            p1.textContent = (`you're a senior citizen`)
+            break;
+            
+        case message>=40:
+            p1.textContent = (`you're a middle aged person`)
+            break;
+            
+        case message>=18:
+            p1.textContent = (`you're an adult`)
+            break;
+            
+        default:
+            p1.textContent = (`you're just a minor`)
+            break;    
+    }
+}
+
+
+const myInput2 = document.getElementById(`myInput2`);
+const mySubmit2 = document.getElementById(`mySubmit2`);
+const p2 = document.getElementById(`p2`);
+
+mySubmit2.onclick = function(){
+
+
+    switch(true){
+        case myInput2.checked:
+            p2.textContent = (`You're a boy`)
+            break;
+
+        default:
+            p2.textContent = (`you're a female`)
+            break;    
     }
 
-    else{
-        p1.textContent = (`you are not subscribed`)
-    }
 
-    if(myGCash.checked){
-        p2.textContent = (`you are paying with gcash`)
-    }
-
-    else if(myCreditCard.checked){
-        p2.textContent = (`you are paying with credit card`)
-    }
-    else{
-        p2.textContent = (`you must select one`)
-    }
 }
