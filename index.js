@@ -1,18 +1,21 @@
+//string slicing
+
+
 const myInput = document.getElementById(`myInput`);
 const mySubmit = document.getElementById(`mySubmit`);
-const myh1 = document.getElementById(`myh1`);
-let message;
+const p1 = document.getElementById(`p1`);
+let name;
+let FirstName;
+let LastName;
 
 mySubmit.onclick = function(){
 
-    message = myInput.value;
+    name = myInput.value;
 
-    if(message>=100){
+    FirstName = name.slice(0, name.indexOf(` `));
+    LastName = name.slice(name.indexOf(` `) + 1);
 
-        myh1.textContent = message.lastIndexOf(2);
-    }
+    p1.textContent = (`${FirstName} ${LastName}`);
 
-    else{
-        myh1.textContent = (`you're correct: ${message}`);
-    }
+    
 }
