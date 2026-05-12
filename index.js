@@ -1,21 +1,34 @@
-//string slicing
+//string method
 
 
-const myInput = document.getElementById(`myInput`);
 const mySubmit = document.getElementById(`mySubmit`);
+const myInput = document.getElementById(`myInput`);
 const p1 = document.getElementById(`p1`);
-let name;
-let FirstName;
-let LastName;
+
+let username;
+let firstcharacter;
+let secondcharacter;
+let thirdcharacter;
+let fourthcharacter;
+
 
 mySubmit.onclick = function(){
 
-    name = myInput.value;
+    username = myInput.value;
 
-    FirstName = name.slice(0, name.indexOf(` `));
-    LastName = name.slice(name.indexOf(` `) + 1);
+    firstcharacter = username.charAt(0);
+    firstcharacter = firstcharacter.toLowerCase();
 
-    p1.textContent = (`${FirstName} ${LastName}`);
+    secondcharacter = username.slice(1, 11);
+    secondcharacter = secondcharacter.toUpperCase();
 
-    
+    thirdcharacter = username.slice(11, 16);
+    thirdcharacter = thirdcharacter.repeat(2);
+
+    fourthcharacter = username.slice(16, 25);
+    fourthcharacter = fourthcharacter.toUpperCase();
+
+    username = firstcharacter + secondcharacter + thirdcharacter + fourthcharacter;
+
+    p1.textContent = username;
 }
