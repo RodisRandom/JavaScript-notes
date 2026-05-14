@@ -1,34 +1,28 @@
-//string method
+//logical operations
 
-
+const p1 = document.getElementById(`p1`);
 const mySubmit = document.getElementById(`mySubmit`);
 const myInput = document.getElementById(`myInput`);
-const p1 = document.getElementById(`p1`);
-
-let username;
-let firstcharacter;
-let secondcharacter;
-let thirdcharacter;
-let fourthcharacter;
-
+let age;
+let message;
 
 mySubmit.onclick = function(){
 
-    username = myInput.value;
+    age = myInput.value;
 
-    firstcharacter = username.charAt(0);
-    firstcharacter = firstcharacter.toLowerCase();
+    switch(true){
 
-    secondcharacter = username.slice(1, 11);
-    secondcharacter = secondcharacter.toUpperCase();
+        case age<0 || age>100:
+            p1.textContent = (`your age can't be below 0 or above 100`);
+            break;
 
-    thirdcharacter = username.slice(11, 16);
-    thirdcharacter = thirdcharacter.repeat(2);
+        case age>=0 && age<=17:
+            p1.textContent = (`you're a minor`);
+            break;
 
-    fourthcharacter = username.slice(16, 25);
-    fourthcharacter = fourthcharacter.toUpperCase();
+        case age>=18 && age<=40:
+            p1.textContent = (`you're an average person`);
+            break;    
+    }
 
-    username = firstcharacter + secondcharacter + thirdcharacter + fourthcharacter;
-
-    p1.textContent = username;
 }
