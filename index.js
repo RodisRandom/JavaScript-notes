@@ -1,28 +1,19 @@
-//logical operations
+//i miss someone....
 
-const p1 = document.getElementById(`p1`);
-const mySubmit = document.getElementById(`mySubmit`);
-const myInput = document.getElementById(`myInput`);
-let age;
-let message;
 
-mySubmit.onclick = function(){
+function mySubmit(){
 
-    age = myInput.value;
 
-    switch(true){
+    const myInput = document.getElementById(`myInput`).value;
+    const number1 = document.getElementById(`number1`);
+    const values = []
 
-        case age<0 || age>100:
-            p1.textContent = (`your age can't be below 0 or above 100`);
-            break;
+    for(i = 0; i < myInput; i++){
+        const value = Math.floor(Math.random() * 6) + 1;
+        values.push(value);
 
-        case age>=0 && age<=17:
-            p1.textContent = (`you're a minor`);
-            break;
 
-        case age>=18 && age<=40:
-            p1.textContent = (`you're an average person`);
-            break;    
+
     }
-
+    number1.textContent = `dice: ${values.join(`, `)}`;
 }
