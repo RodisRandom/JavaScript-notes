@@ -1,19 +1,48 @@
 //i miss someone....
 
 
-function mySubmit(){
+
+function characters(length, lowercase, uppercase, symbols, numbers){
 
 
-    const myInput = document.getElementById(`myInput`).value;
-    const number1 = document.getElementById(`number1`);
-    const values = []
+    const LowerCases = "abcdefghijklmnopqrstuvwxyz";
+    const UpperCases = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const Numbers = "0123456789";
+    const Symbols = ".,;-_=@#$";
+    let adding = "";
+    let password = "";
 
-    for(i = 0; i < myInput; i++){
-        const value = Math.floor(Math.random() * 6) + 1;
-        values.push(value);
+    adding += lowercaseNumber ? LowerCases : "";
+    adding += uppercaseNumber ? UpperCases : "";
+    adding += includeSymbols ? Symbols : "";
+    adding += includeNumbers ? Numbers : "";
 
 
-
+    if(length <= 0){
+        console.log(`pls type any values or numbers`)
     }
-    number1.textContent = `dice: ${values.join(`, `)}`;
+
+    if(adding.length === 0){
+        console.log(`pls select any characters for the random password generator to work`)
+    }
+
+    for(let i = 0; i < length; i++){
+
+        const RandomNumber = Math.floor(Math.random() * adding.length);
+
+        password += adding[RandomNumber];
+    }
+
+
+    return password;
 }
+
+const lengthNumber = 12;
+const lowercaseNumber = true;
+const uppercaseNumber = true;
+const includeSymbols = true;
+const includeNumbers = true;
+
+const sum = characters(lengthNumber, lowercaseNumber, uppercaseNumber, includeSymbols, includeNumbers);
+
+console.log(`${sum}`);
